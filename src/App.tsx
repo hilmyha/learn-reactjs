@@ -9,6 +9,8 @@ import { Heading } from "./components/Heading";
 import { Medali } from "./components/Medali";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
+import { User } from "./components/state/User";
+import { LoggedIn } from "./components/state/LoggedIn";
 
 function App() {
   const personName = {
@@ -54,6 +56,9 @@ function App() {
         }}
       />
       <Input value="" handleChange={(event) => console.log(event)} />
+
+      <LoggedIn />
+      <User />
     </div>
   );
 }

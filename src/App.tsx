@@ -4,6 +4,9 @@ import "./App.css";
 import { Greet } from "./components/Greet";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
+import { Status } from "./components/Status";
+import { Heading } from "./components/Heading";
+import { Medali } from "./components/Medali";
 
 function App() {
   const personName = {
@@ -31,9 +34,21 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Greet name="Haidar" messageCount={20} isLoggedIn={false} />
+
+      <Heading >
+        Placeholder heading
+      </Heading>
+      <Medali>
+        <Heading>
+          Medali dipersembahkan oleh Haidar
+        </Heading>
+      </Medali>
+
+      <Greet name="Haidar" isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={nameList} />
+
+      <Status messages="loading" />
     </div>
   );
 }

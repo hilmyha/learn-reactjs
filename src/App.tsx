@@ -7,6 +7,8 @@ import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Heading } from "./components/Heading";
 import { Medali } from "./components/Medali";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
 
 function App() {
   const personName = {
@@ -35,13 +37,9 @@ function App() {
         </a>
       </header> */}
 
-      <Heading >
-        Placeholder heading
-      </Heading>
+      <Heading>Placeholder heading</Heading>
       <Medali>
-        <Heading>
-          Medali dipersembahkan oleh Haidar
-        </Heading>
+        <Heading>Medali dipersembahkan oleh Haidar</Heading>
       </Medali>
 
       <Greet name="Haidar" isLoggedIn={true} />
@@ -49,6 +47,13 @@ function App() {
       <PersonList names={nameList} />
 
       <Status messages="loading" />
+
+      <Button
+        handleClick={(event) => {
+          console.log("Button clicked", event);
+        }}
+      />
+      <Input value="" handleChange={(event) => console.log(event)} />
     </div>
   );
 }

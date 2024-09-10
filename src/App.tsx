@@ -11,6 +11,7 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { User } from "./components/state/User";
 import { LoggedIn } from "./components/state/LoggedIn";
+import { Counter } from "./components/state/Counter";
 
 function App() {
   const personName = {
@@ -59,6 +60,8 @@ function App() {
 
       <LoggedIn />
       <User />
+
+      <Counter />
     </div>
   );
 }
